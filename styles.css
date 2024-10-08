@@ -1,0 +1,151 @@
+/* Global styles */
+/* Global styles */
+body {
+    font-size: 18px; /* Default font size */
+    color: #2D3748; /* Default text color */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* Default font family */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for grid layout */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    grid-area: header;
+    background-color: #63B3ED; /* Header background color */
+    color: #FFFFFF; /* Header text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack image and text */
+    padding: 20px;
+    text-align: center; /* Center text in header */
+}
+
+header h1 {
+    font-size: 36px; /* Header h1 font size */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Header font family */
+}
+
+header p {
+    margin: 0; /* Remove default margin */
+}
+
+/* Profile image styles */
+header img {
+    border-radius: 50%; /* Circular image */
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space below image */
+}
+
+/* Main content styles */
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+/* Article styles */
+article {
+    margin-bottom: 40px; /* Space between articles */
+}
+
+/* Blog post title styles */
+article h2 {
+    font-size: 32px; /* Blog post title font size */
+    color: #48BB78; /* Blog post title color */
+}
+
+.article-meta {
+    color: #718096; /* Date and author color */
+    font-size: 14px; /* Meta font size */
+    margin-bottom: 10px; /* Space below meta */
+}
+
+/* Image styles in articles */
+article img {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+    margin: 10px; /* Space around the image */
+}
+
+/* First blog post image to the right */
+article:first-of-type img {
+    float: right; /* Float the first image to the right */
+}
+
+/* Second blog post image to the left */
+article:nth-of-type(2) img {
+    float: left; /* Float the second image to the left */
+}
+
+/* Clear floats after articles */
+article::after {
+    content: "";
+    display: table;
+    clear: both; /* Clear floats */
+}
+
+/* Sidebar styles */
+.sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin: 10px 0; /* Space around heading */
+}
+
+.about {
+    background-color: #E2E8F0; /* Background color for About section */
+    padding: 10px; /* Inner padding */
+}
+
+.about h3 {
+    color: #000000; /* About heading color */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* About heading font family */
+}
+
+.social-media h3,
+.archives h3 {
+    color: #48BB78; /* Color for Social Media and Archives headings */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Font family for headings */
+}
+
+.sidebar a {
+    color: #4299E1; /* Color for links in sidebar */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Footer styles */
+footer {
+    grid-area: footer;
+    background-color: #2C5282; /* Footer background color */
+    color: #FFFFFF; /* Footer text color */
+    text-align: center; /* Center text in footer */
+    padding: 10px; /* Inner padding */
+}
+
+/* Utility styles */
+ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin: 5px 0; /* Space between list items */
+}
